@@ -89,22 +89,21 @@ class CustomSmallSocialLoginButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return InkWell(
-      onTap: onpress,
-      borderRadius: BorderRadius.circular(8),
-      child: Container(
-          decoration: BoxDecoration(
-              border: Border.all(color: whiteColor!),
-              color: buttonColor,
-              borderRadius: BorderRadius.circular(8)),
-          width: getWidth(40),
-          height: getHeight(40),
+    return Container(
+        decoration: BoxDecoration(
+            border: Border.all(color: whiteColor!),
+            color: buttonColor,
+            borderRadius: BorderRadius.circular(8)),
+        width: getWidth(50),
+        height: getHeight(50),
+        child: TextButton(
+          onPressed: onpress,
           child: Center(
             child: Image.asset(
               img!,
               color: whiteColor,
             ),
-          )),
-    );
+          ),
+        ));
   }
 }
