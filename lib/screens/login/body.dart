@@ -1,4 +1,5 @@
 import 'package:closer/screens/login/components/social_login_btn.dart';
+import 'package:closer/screens/login_form/login_form.dart';
 import 'package:closer/screens/signup/signup.dart';
 import 'package:closer/theme/constants.dart';
 import 'package:closer/theme/size_config.dart';
@@ -43,7 +44,7 @@ class Body extends StatelessWidget {
             SizedBox(height: getHeight(20)),
             CustomLoginButton(
               buttonColor: Colors.transparent,
-              onpress: () {},
+              onpress: () => customNavigatorPush(context, LoginForm()),
               title: 'Login Now',
             ),
             Spacer(),

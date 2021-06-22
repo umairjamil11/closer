@@ -3,7 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 const Color? kPrimaryColor = Color(0xff0077B5);
-const Color? kSecondryColor = Color(0xff);
+final Color? kSecondryColor = Colors.black.withOpacity(0.5);
 const Color? kPrimaryTextColor = Colors.black;
 final Color? kSecondryTextColor = Colors.black.withOpacity(0.5);
 const Color? kGreenColor = Color(0xff0E990B);
