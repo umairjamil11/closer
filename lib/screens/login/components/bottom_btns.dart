@@ -1,5 +1,5 @@
 
-import 'package:closer/screens/home/components/social_login_btn.dart';
+import 'package:closer/screens/login/components/social_login_btn.dart';
 import 'package:flutter/material.dart';
 
 class BottomButtons extends StatelessWidget {

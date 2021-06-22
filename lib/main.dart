@@ -1,4 +1,4 @@
-import 'package:closer/screens/home/login.dart';
+import 'package:closer/screens/login/login.dart';
 import 'package:closer/theme/theme.dart';
 import 'package:flutter/material.dart';
 
