@@ -1,4 +1,5 @@
-import 'package:closer/pages/home/home.dart';
+import 'package:closer/pages/home/login.dart';
+import 'package:closer/theme/theme.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp());
@@ -8,7 +9,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: HomePage(),
+      home: LoginScreen(),
+      theme: appTheme(),
     );
   }
 }
