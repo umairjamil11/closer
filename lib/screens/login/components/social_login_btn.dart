@@ -1,5 +1,6 @@
 import 'package:closer/theme/constants.dart';
 import 'package:closer/theme/size_config.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 // long social login button
@@ -69,9 +70,13 @@ class CustomLoginButton extends StatelessWidget {
         onPressed: onpress,
         child: Padding(
           padding: EdgeInsets.symmetric(horizontal: getWidth(20)),
-          child: Align(
-              alignment: Alignment.centerLeft,
-              child: Text(title!, style: TextStyle(color: whiteColor))),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text(title!, style: TextStyle(color: whiteColor)),
+              Icon(CupertinoIcons.arrow_right, color: whiteColor)
+            ],
+          ),
         ),
       ),
     );

@@ -57,3 +57,21 @@ buildCreateNewText() => Align(
             ]),
       ),
     );
+
+// signin textfield
+buildCustomSignInTextField(
+        {@required String? label, @required Function(String)? onChanged}) =>
+    Container(
+      width: 55,
+      height: getHeight(70),
+      decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(8),
+          border: Border.all(color: kSecondryTextColor!.withOpacity(0.2))),
+      child: TextFormField(
+        cursorColor: kSecondryTextColor!.withOpacity(0.1),
+        onChanged: onChanged,
+        decoration: InputDecoration(
+            labelText: label,
+            floatingLabelBehavior: FloatingLabelBehavior.always),
+      ),
+    );
