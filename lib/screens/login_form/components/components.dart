@@ -60,7 +60,10 @@ buildCreateNewText() => Align(
 
 // signin textfield
 buildCustomSignInTextField(
-        {@required String? label, @required Function(String)? onChanged}) =>
+        {@required String? label,
+        @required Function(String)? onChanged,
+        String? Function(String?)? validator,
+        @required bool? obsecureText}) =>
     Container(
       width: 55,
       height: getHeight(70),
@@ -68,10 +71,31 @@ buildCustomSignInTextField(
           borderRadius: BorderRadius.circular(8),
           border: Border.all(color: kSecondryTextColor!.withOpacity(0.2))),
       child: TextFormField(
+        obscureText: obsecureText! ? true : false,
         cursorColor: kSecondryTextColor!.withOpacity(0.1),
         onChanged: onChanged,
+        validator: validator,
         decoration: InputDecoration(
             labelText: label,
             floatingLabelBehavior: FloatingLabelBehavior.always),
       ),
+    );
+
+// custom login button
+buildCustomLoginButton({Function()? onpress}) => InkWell(
+      splashColor: whiteColor,
+      onTap: onpress,
+      child: Container(
+          width: 55,
+          height: getHeight(70),
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(8),
+            color: kPrimaryColor,
+          ),
+          child: Center(
+            child: Text(
+              'Login',
+              style: TextStyle(color: whiteColor, fontSize: getWidth(18)),
+            ),
+          )),
     );
