@@ -1,4 +1,5 @@
 import 'package:closer/theme/size_config.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 const Color? kPrimaryColor = Color(0xff0077B5);
@@ -12,3 +13,9 @@ final screenHeight = SizeConfig.screenHeight;
 final screenWidth = SizeConfig.screenWidth;
 
 const Duration? kAnimationDuration = Duration(microseconds: 250);
+
+customNavigatorPush(BuildContext ctx, Widget page) =>
+    Navigator.of(ctx).push(CupertinoPageRoute(builder: (context) => page));
+customNavigatorPushReplacement(BuildContext ctx, Widget page) =>
+    Navigator.of(ctx)
+        .pushReplacement(CupertinoPageRoute(builder: (context) => page));

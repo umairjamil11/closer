@@ -22,7 +22,7 @@ class Body extends StatelessWidget {
             Spacer(flex: 2),
             buildTopText(),
             Spacer(),
-            buildCreateNewText(),
+            buildCreateNewText(context),
             Spacer(flex: 2),
             CustomSocialLoginButton(
               buttonColor: kPrimaryColor,

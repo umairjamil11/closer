@@ -17,7 +17,8 @@ class CustomSocialLoginButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () {},
+      onTap: onpress,
+      borderRadius: BorderRadius.circular(8),
       child: Container(
         decoration: BoxDecoration(
             color: buttonColor, borderRadius: BorderRadius.circular(8)),
@@ -58,7 +59,8 @@ class CustomLoginButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () {},
+      borderRadius: BorderRadius.circular(8),
+      onTap: onpress,
       child: Container(
         decoration: BoxDecoration(
             border: Border.all(color: whiteColor!),
@@ -89,7 +91,8 @@ class CustomSmallSocialLoginButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () {},
+      onTap: onpress,
+      borderRadius: BorderRadius.circular(8),
       child: Container(
           decoration: BoxDecoration(
               border: Border.all(color: whiteColor!),
