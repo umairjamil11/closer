@@ -1,4 +1,5 @@
 import 'package:closer/screens/login/components/social_login_btn.dart';
+import 'package:closer/screens/signup/signup.dart';
 import 'package:closer/theme/constants.dart';
 import 'package:closer/theme/size_config.dart';
 import 'package:flutter/material.dart';
@@ -22,7 +23,9 @@ class Body extends StatelessWidget {
             Spacer(flex: 2),
             buildTopText(),
             Spacer(),
-            buildCreateNewText(context),
+            InkWell(
+                onTap: () => customNavigatorPush(context, SignUpScreen()),
+                child: buildCreateNewText()),
             Spacer(flex: 2),
             CustomSocialLoginButton(
               buttonColor: kPrimaryColor,

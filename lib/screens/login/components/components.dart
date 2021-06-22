@@ -3,29 +3,26 @@ import 'package:closer/theme/size_config.dart';
 import 'package:flutter/material.dart';
 
 // create new account text
-InkWell buildCreateNewText(BuildContext context) {
-  return InkWell(
-    // onTap: ()=>customNavigatorPush(ctx, page),
-    child: Align(
-      alignment: Alignment.centerLeft,
-      child: Text.rich(
-        TextSpan(
-            text: 'don\'t have an account? ',
-            style: TextStyle(
-                fontSize: getWidth(14),
-                color: whiteColor!.withOpacity(0.5),
-                fontWeight: FontWeight.normal),
-            children: [
-              TextSpan(
-                text: 'Create New',
-                style: TextStyle(
-                  fontSize: getWidth(12),
-                  color: whiteColor,
-                  fontWeight: FontWeight.w500,
-                ),
+Align buildCreateNewText() {
+  return Align(
+    alignment: Alignment.centerLeft,
+    child: Text.rich(
+      TextSpan(
+          text: 'don\'t have an account? ',
+          style: TextStyle(
+              fontSize: getWidth(14),
+              color: whiteColor!.withOpacity(0.5),
+              fontWeight: FontWeight.normal),
+          children: [
+            TextSpan(
+              text: 'Create New',
+              style: TextStyle(
+                fontSize: getWidth(12),
+                color: whiteColor,
+                fontWeight: FontWeight.w500,
               ),
-            ]),
-      ),
+            ),
+          ]),
     ),
   );
 }
