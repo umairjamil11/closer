@@ -58,16 +58,15 @@ class CustomLoginButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return InkWell(
-      borderRadius: BorderRadius.circular(8),
-      onTap: onpress,
-      child: Container(
-        decoration: BoxDecoration(
-            border: Border.all(color: whiteColor!),
-            color: buttonColor,
-            borderRadius: BorderRadius.circular(8)),
-        width: screenWidth! * 0.85,
-        height: getHeight(65),
+    return Container(
+      decoration: BoxDecoration(
+          border: Border.all(color: whiteColor!),
+          color: buttonColor,
+          borderRadius: BorderRadius.circular(8)),
+      width: screenWidth! * 0.85,
+      height: getHeight(65),
+      child: TextButton(
+        onPressed: onpress,
         child: Padding(
           padding: EdgeInsets.symmetric(horizontal: getWidth(20)),
           child: Align(
